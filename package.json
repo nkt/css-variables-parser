@@ -1,0 +1,19 @@
+{
+  "name": "css-variables-parser",
+  "version": "0.0.0",
+  "description": "CSS variables parser",
+  "main": "src/index.js",
+  "repository": "git@github.com:nkt/css-variables-parser.git",
+  "author": "Nikita Gusakov <gusnkt@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "postcss": "^5.2.12"
+  },
+  "devDependencies": {
+    "jest": "18.1.0"
+  },
+  "jest": {
+    "testRegex": ["\\.js$"],
+    "testPathDirs": ["<rootDir>/test"]
+  }
+}

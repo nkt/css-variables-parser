@@ -1,0 +1,11 @@
+:root {
+  --color-primary: blue;
+  --color-warning: orange;
+  --theme-primary: {
+    color: var(--color-primary);
+  }
+}
+
+.test {
+  color: var(--color-primary);
+}
