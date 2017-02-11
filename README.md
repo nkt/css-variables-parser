@@ -1,5 +1,7 @@
-CSS variables parser
+CSS Variables Parser
 ====================
+
+[![CircleCI](https://circleci.com/gh/nkt/css-variables-parser.svg?style=shield)](https://circleci.com/gh/nkt/css-variables-parser)
 
 Installation
 ------------
