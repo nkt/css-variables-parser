@@ -12,6 +12,11 @@
   "devDependencies": {
     "jest": "18.1.0"
   },
+  "scripts": {
+    "test": "jest",
+    "preversion": "yarn test",
+    "postversion": "git push --follow-tags"
+  },
   "jest": {
     "testRegex": ["\\.js$"],
     "testPathDirs": ["<rootDir>/test"]
