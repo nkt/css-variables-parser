@@ -1,15 +1,15 @@
-const fs = require('fs');
 const postcss = require('postcss');
 
 function isInsideRoot(rule) {
-  return rule.selectors.length !== 1 ||
-         rule.selectors[0] !== ':root' ||
-         rule.parent.type !== 'root';
+  return (
+    rule.selectors.length !== 1 ||
+    rule.selectors[0] !== ':root' ||
+    rule.parent.type !== 'root'
+  );
 }
 
 function isVariableDeclaration(decl) {
-  return Boolean(decl.value) &&
-         decl.prop.startsWith('--');
+  return Boolean(decl.value) && decl.prop.startsWith('--');
 }
 
 function parse(css, options) {
@@ -35,12 +35,4 @@ function parse(css, options) {
   return variables;
 }
 
-function parseFile(fileName, options) {
-  const css = fs.readFileSync(fileName, 'utf-8');
-  return parse(css, Object.assign({}, options, { from: fileName }));
-}
-
-module.exports = {
-  parse,
-  parseFile
-};
+module.exports = parse;

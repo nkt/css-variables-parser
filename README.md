@@ -1,13 +1,13 @@
 CSS Variables Parser
 ====================
 
-[![CircleCI](https://circleci.com/gh/nkt/css-variables-parser.svg?style=shield)](https://circleci.com/gh/nkt/css-variables-parser)
+[![Build Status](https://circleci.com/gh/nkt/css-variables-parser.svg?style=shield)](https://circleci.com/gh/nkt/css-variables-parser)
 
 Installation
 ------------
 
-```
-yarn add css-variables-parser
+```bash
+npm install css-variables-parser
 ```
 
 Usage
@@ -16,21 +16,33 @@ Usage
 Parse css string
 
 ```js
-const parser = require('css-variables-parser');
+const { parse } = require('css-variables-parser');
 
-const variables = parser.parse(':root { --color-primary: red; }');
+const variables = parse(':root { --color-primary: red; }');
 console.log(variables); // { 'color-primary': 'red' }
 ```
 
-Parse file
+Parse file (not available in browser)
 
 ```js
-const parser = require('css-variables-parser');
+const {
+  parseFile,
+  parseFileSync,
+  parseFileAsync
+} = require('css-variables-parser');
 
-const variables = parser.parseFile('./path/to/file.css');
+parseFile('./path/to/file.css', null, (error, variables) => {
+  console.log({ error, variables });
+});
+
+const variables = parseFileSync('./path/to/file.css');
+
+parseFileAsync('./path/to/file.css')
+  .then((variables) => console.log(variables))
+  .catch((error) => console.error(error));
 ```
 
-Pass options as second argument
+There are some options:
 
 ```js
 const parser = require('css-variables-parser');
@@ -43,4 +55,5 @@ const variables = parser.parse(css, {
 
 License
 -------
+
 [MIT](LICENSE)
