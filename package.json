@@ -7,22 +7,14 @@
   "author": "Nikita Gusakov <gusnkt@gmail.com>",
   "license": "MIT",
   "dependencies": {
-    "postcss": "^5.2.12"
+    "postcss": "^7.0.17"
   },
   "devDependencies": {
-    "jest": "18.1.0"
+    "jest": "24.8.0"
   },
   "scripts": {
     "test": "jest",
-    "preversion": "yarn test",
+    "preversion": "npm test",
     "postversion": "git push --follow-tags"
-  },
-  "jest": {
-    "testRegex": [
-      "\\.js$"
-    ],
-    "testPathDirs": [
-      "<rootDir>/test"
-    ]
   }
 }

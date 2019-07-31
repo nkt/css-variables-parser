@@ -1,6 +1,6 @@
 const fs = require('fs');
 const path = require('path');
-const parser = require('../src');
+const parser = require('../index');
 
 const casesPath = path.resolve(__dirname, 'cases');
 
