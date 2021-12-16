@@ -8,7 +8,7 @@
   "author": "Nikita Gusakov <gusnkt@gmail.com>",
   "license": "MIT",
   "dependencies": {
-    "postcss": "^8.4.5"
+    "postcss": "^7.0.36"
   },
   "devDependencies": {
     "jest": "27.4.5"
