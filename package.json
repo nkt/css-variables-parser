@@ -1,6 +1,6 @@
 {
   "name": "css-variables-parser",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "CSS variables parser",
   "main": "src/index.node.js",
   "browser": "src/index.browser.js",
